@@ -4,23 +4,19 @@ public class App
 {
     public static void main( String[] args )
     {
-        // Make your first Hello World app!
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Give the first number:");
+        System.out.println("Kāds ir jūsu ātrums?");
+        int atrums = Integer.valueOf(scanner.nextLine());
         
-        String tekstsPirmais = scanner.nextLine();
-        int pirmaisSkaitlis = Integer.valueOf(tekstsPirmais);
-        
-        System.out.println("Give the second number:");
-        String tekstsOtrais = scanner.nextLine();
-        int otraisSkaitlis = Integer.valueOf(tekstsOtrais);
+        if (atrums>120) {
 
-        double dalishana = (double) pirmaisSkaitlis / otraisSkaitlis;
-
-        System.out.println(tekstsPirmais + "+" + tekstsOtrais + "=" + (pirmaisSkaitlis + otraisSkaitlis));
-        System.out.println(tekstsPirmais + "-" + tekstsOtrais + "=" + (pirmaisSkaitlis-otraisSkaitlis));
-        System.out.println(tekstsPirmais + "*" + tekstsOtrais + "=" +(pirmaisSkaitlis * otraisSkaitlis));
-        System.out.println(tekstsPirmais + "/" + tekstsOtrais + "=" + dalishana);
+            System.out.println("Pārāk ātri");
+        } else {
+            System.out.println("Viss okay");
+        }
+    
+    
+    
     }
 
 }
