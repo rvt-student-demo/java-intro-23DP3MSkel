@@ -6,24 +6,20 @@ public class App
     {
         Scanner scanner = new Scanner(System.in);
    
-        int numbers = 0;
-        int sum = 0;
-        while (true) {
-            System.out.println("give a number:");
-            int nulle = Integer.valueOf(scanner.nextLine());
-            if(nulle != 0){
-                numbers = numbers+1;
-                sum = sum + nulle;
+        int skaitli = 0;
+        int lietotajs = Integer.valueOf(scanner.nextLine());
+
+        while (true){
+            if (skaitli != lietotajs){
+                System.out.println(skaitli);
+                skaitli = skaitli + 1;
                 continue;
-            }
-            if (nulle == 0){
+            }else if (skaitli == lietotajs){
+                System.out.println(skaitli);
                 break;
             }
-            
-
         }
-        System.out.println("Number of numbers:"+numbers);
-        System.out.println("Sum of the numbers:"+sum);
     }
 
+    
 }
