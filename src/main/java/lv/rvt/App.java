@@ -6,16 +6,17 @@ public class App
     {
         Scanner scanner = new Scanner(System.in);
    
-        int skaitli = 0;
+        int faktorials = 0;
+        int summa = 0;
+        System.out.println("last number?");
         int lietotajs = Integer.valueOf(scanner.nextLine());
-
-        while (true){
-            if (skaitli != lietotajs){
-                System.out.println(skaitli);
-                skaitli = skaitli + 1;
+        while(true){
+            if(faktorials != lietotajs){
+                faktorials = faktorials + 1;
+                summa = summa + faktorials;
                 continue;
-            }else if (skaitli == lietotajs){
-                System.out.println(skaitli);
+            }else if(faktorials == lietotajs){
+                System.out.println("the sum is " + summa );
                 break;
             }
         }
