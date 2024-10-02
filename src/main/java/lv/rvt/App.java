@@ -6,21 +6,35 @@ public class App
     {
         Scanner scanner = new Scanner(System.in);
    
-        int faktorials = 0;
-        int summa = 0;
-        System.out.println("last number?");
-        int lietotajs = Integer.valueOf(scanner.nextLine());
+        int sum = 0;
+        int amount = 0;
+        int even = 0;
+        int odd = 0;
+
         while(true){
-            if(faktorials != lietotajs){
-                faktorials = faktorials + 1;
-                summa = summa + faktorials;
-                continue;
-            }else if(faktorials == lietotajs){
-                System.out.println("the sum is " + summa );
-                break;
+        System.out.println("Give numbers:");
+        int skaitlis = Integer.valueOf(scanner.nextLine());
+        if(skaitlis>-1 || skaitlis<-1){
+            sum = sum +  skaitlis;
+            amount = amount + 1;
+            if(skaitlis % 2 == 0){
+                even ++;
+            }else if (skaitlis % 2 != 0){
+                odd = odd + 1;
+                
             }
+        }else if (skaitlis == -1){
+            break;
         }
     }
+
+    System.out.println("Thx! Bye!");
+    System.out.println("Sum: "+ sum);
+    System.out.println("Numbers: "+ amount);
+    System.out.println("average: "+ (double) sum/amount);
+    System.out.println("Even "+ even);
+    System.out.println("ODD: "+ odd);
+}
 
     
 }
