@@ -5,7 +5,14 @@ public class App
     public static void main( String[] args )
     {
         Scanner scanner = new Scanner(System.in);
-        divisibleByThree(2,10);
+       
+        System.out.println("Ievadiet pirmo skaitli");
+        int pirmais = Integer.valueOf(scanner.nextLine());
+
+        System.out.println("Ievadiet otro skaitli");
+        int otrais = Integer.valueOf(scanner.nextLine());
+        System.out.println();
+        divisibleByThree(pirmais,otrais);
 
     }
     public static void divisibleByThree(int first, int second){
