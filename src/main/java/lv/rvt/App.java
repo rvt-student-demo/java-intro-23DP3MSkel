@@ -5,16 +5,22 @@ public class App
     public static void main( String[] args )
     {
         Scanner scanner = new Scanner(System.in);
-        int reizes = 0;
-   
-        int lietotajs = Integer.valueOf(scanner.nextLine());
-        while(reizes<lietotajs ){
-            reizes +=1;
-            text();
+        divisibleByThree(2,10);
+
+    }
+    public static void divide(int pirm, int otr){
+        System.out.println((double)pirm/otr);
+    }
+    public static void divisibleByThree(int first, int second){
+        while(first<=second){
+            if(first % 3 == 0){
+            System.out.println(first);
+            
+            }
+            first++;
         }
-}
-public static void text(){
-    System.out.println("In a hole in the ground there lived a method");
-}
+        
+       
+    }
     
 }
