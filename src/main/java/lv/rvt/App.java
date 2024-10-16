@@ -4,7 +4,7 @@ public class App
 {
     public static void main( String[] args )
     {
-        Stars.PrintSqare(6);
+        Stars.printTriangle(4);
 
 
     }
