@@ -6,54 +6,39 @@ public class App
 {
     public static void main( String[] args )
     {
-        Random rand = new Random();
-        
-        int[] masivs = new int[10];
+       Scanner input = new Scanner(System.in);
+       int gaduSumma = 0;
+       int skaits = 0;
+       ArrayList <String> vardi = new ArrayList<>();
 
-        for(int i=0; i<10; i++){
-            masivs[i] = rand.nextInt(10);
-            System.out.print(masivs[i] + " ");
-        }
-        int summa = 0;
 
-        int min = masivs[0];
-        int max = masivs[0];
-
-        for(int i = 0;i<10;i++){
-            if(min>masivs[i]){
-                min = masivs[i];
+       while(true){
+            String ievade = input.nextLine();
+            if (ievade.isEmpty()){
+                break;
             }
-            if(max<masivs[i]){
-                max = masivs[i];
-            }
-            summa = summa + masivs[i];
-        }
-        double average = (double) summa/masivs.length ;
-        System.out.println();
-        System.out.println("Lielākais masīva ir: "+max);
-        System.out.println("Mazākais masīvā ir: "+min);
-        System.out.println("Vidējā vērtība ir: "+  average);
-        
-        bubbleSort(masivs);
 
-        
+            String[] pieces = ievade.split(",");
+            
+            gaduSumma = gaduSumma + Integer.valueOf(pieces[1]);
+            // skaits = skaits + Integer.valueOf(pieces[1]);
+            skaits++;
+            vardi.add(pieces[0]);
+
         }
-        public static int[] bubbleSort(int[] skaitli){
-        
-        for(int i = 0; i<skaitli.length; i++){
-            for(int j = 0; j<skaitli.length -1; j++){
-                if (skaitli[j]> skaitli[j+1]){
-                    int temp = skaitli[j];
-                    skaitli[j] = skaitli[j+1];
-                    skaitli[j+1] = temp;
+        String garakais = "";
+        for(int i = 0; i < skaits; i++) {
+            if (vardi.get(i).length() > garakais.length()) {
+                garakais = vardi.get(i);
+            }
                 }
+            System.out.println("Garākais vārds ir: "+garakais);
+            System.out.println("AVRG birth year: "+ ((double) gaduSumma / skaits));
 
-            }
-        }
-            for(int skaitlis : skaitli ){
-                System.out.print(skaitlis + " ");
-            }
-            return skaitli;
+
+       
+       }
+
     }    
     
-}
+
